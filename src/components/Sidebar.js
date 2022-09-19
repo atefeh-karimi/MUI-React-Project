@@ -8,11 +8,9 @@ import {
   Groups,
   ModeNight,
 } from "@mui/icons-material";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+
 import {
   Box,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
@@ -20,6 +18,7 @@ import {
   ListItemText,
   Switch,
 } from "@mui/material";
+
 import React from "react";
 // import { useTheme } from "styled-components";
 // import ColorModeContext from "../context/ColorModeContext";
@@ -29,9 +28,19 @@ function Sidebar() {
   // const colorMode = React.useContext(ColorModeContext);
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position="fix">
-        <List>
-          <ListItem disablePadding>
+      <Box position="fixed">
+        <List
+          sx={{
+            // hover states
+            "& .MuiListItemButton-root:hover": {
+              bgcolor: "",
+              "&, & .MuiListItemIcon-root": {
+                color: "#1976d2",
+              },
+            },
+          }}
+        >
+          <ListItem disablePadding classes={{}}>
             <ListItemButton>
               <ListItemIcon>
                 <Home />
