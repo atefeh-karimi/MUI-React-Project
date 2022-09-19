@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   AppBar,
@@ -9,6 +9,8 @@ import {
   Typography,
   Badge,
   Avatar,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import EmailIcon from "@mui/icons-material/Email";
@@ -33,6 +35,7 @@ const Icon = styled(Box)(({ theme }) => ({
 }));
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
     <AppBar position="sticky">
       <ToolBarStyle>
@@ -47,23 +50,52 @@ function Navbar() {
           <Badge
             badgeContent={4}
             color="error"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{
+              "&:hover": { cursor: "pointer" },
+              display: { xs: "none", sm: "block" },
+            }}
           >
             <EmailIcon />
           </Badge>
           <Badge
             badgeContent={1}
             color="error"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{
+              "&:hover": { cursor: "pointer" },
+              display: { xs: "none", sm: "block" },
+            }}
           >
             <Notifications />
           </Badge>
           <Avatar
-            sx={{ width: "33px", height: "33px" }}
+            onClick={(e) => setOpen(true)}
+            sx={{
+              "&:hover": { cursor: "pointer" },
+              width: "33px",
+              height: "33px",
+            }}
             src="/broken-image.jpg"
           />
         </Icon>
       </ToolBarStyle>{" "}
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 }
