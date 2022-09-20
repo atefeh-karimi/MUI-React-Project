@@ -1,4 +1,4 @@
-import { Favorite, FavoriteBorder, MoreVert, Share } from "@mui/icons-material";
+import { Favorite, FavoriteBorder, Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -14,17 +14,12 @@ import React from "react";
 
 function Post({ name, body, url }) {
   return (
-    <Card sx={{ margin: "20px" }}>
+    <Card sx={{ margin: "20px" }} position="absolute">
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
             {name.charAt(0)}
           </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVert />
-          </IconButton>
         }
         title={name}
         subheader="September 19, 2022"

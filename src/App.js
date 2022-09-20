@@ -1,11 +1,12 @@
 import React from "react";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import ColorModeContext from "./context/ColorModeContext";
+import { Stack } from "@mui/system";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Rightbar from "./components/Rightbar";
-import { Stack } from "@mui/system";
 import Navbar from "./components/Navbar";
-import { Box, createTheme, ThemeProvider } from "@mui/material";
+import Add from "./components/Add";
 
 function App() {
   const [mode, setMode] = React.useState("light");
@@ -38,6 +39,7 @@ function App() {
             <Feed />
             <Rightbar />
           </Stack>
+          <Add />
         </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
