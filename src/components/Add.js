@@ -26,7 +26,6 @@ const StyledBox = styled(Box)({
 const style = {
   width: 400,
   height: 300,
-  bgcolor: "white",
   padding: 3,
   borderRadius: "8px",
 };
@@ -55,7 +54,7 @@ function Add() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} bgcolor={"background.default"} color={"text.primary"}>
           <Typography variant="h6" color="gray" mb={2}>
             Create post
           </Typography>

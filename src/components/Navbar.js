@@ -22,8 +22,7 @@ const ToolBarStyle = styled(Toolbar)({
   alignItems: "center",
 });
 
-const Search = styled("div")(({ theme }) => ({
-  backgroundColor: "white",
+const Search = styled(Box)(({ theme }) => ({
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
@@ -40,11 +39,11 @@ function Navbar() {
     <AppBar position="sticky">
       <ToolBarStyle>
         <Typography sx={{ display: { xs: "none", sm: "block" } }}>
-          NavBar
+          LOGO
         </Typography>{" "}
         <MenuIcon sx={{ display: { sm: "none" } }} />
-        <Search>
-          <InputBase placeholder="Search…" />
+        <Search bgcolor={"background.default"} color={"text.primary"}>
+          <InputBase sx={{ width: "100%" }} placeholder="Search…" />
         </Search>
         <Icon>
           <Badge

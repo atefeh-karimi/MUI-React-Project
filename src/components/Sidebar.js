@@ -18,14 +18,9 @@ import {
   ListItemText,
   Switch,
 } from "@mui/material";
-
 import React from "react";
-// import { useTheme } from "styled-components";
-// import ColorModeContext from "../context/ColorModeContext";
 
-function Sidebar() {
-  // const theme = useTheme();
-  // const colorMode = React.useContext(ColorModeContext);
+function Sidebar({ setMode, mode }) {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -103,7 +98,9 @@ function Sidebar() {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <Switch
+                onClick={(e) => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
         </List>
