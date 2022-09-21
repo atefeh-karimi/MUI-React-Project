@@ -12,9 +12,10 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import EmailIcon from "@mui/icons-material/Email";
 import Notifications from "@mui/icons-material/Notifications";
+import MyDrawer from "./Drawer";
 
 const ToolBarStyle = styled(Toolbar)({
   display: "flex",
@@ -35,13 +36,15 @@ const Icon = styled(Box)(({ theme }) => ({
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       <ToolBarStyle>
         <Typography sx={{ display: { xs: "none", sm: "block" } }}>
           LOGO
         </Typography>{" "}
-        <MenuIcon sx={{ display: { sm: "none" } }} />
+        {/* <MenuIcon sx={{ display: { sm: "none" } }} /> */}
+        <MyDrawer />
         <Search bgcolor={"background.default"} color={"text.primary"}>
           <InputBase sx={{ width: "100%" }} placeholder="Search…" />
         </Search>
