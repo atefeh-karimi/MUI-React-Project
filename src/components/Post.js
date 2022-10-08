@@ -23,7 +23,7 @@ function Post({ name, body, url }) {
         title={name}
         subheader="September 19, 2022"
       />
-      <CardMedia component="img" height="20%" image={url} alt="Paella dish" />
+      <CardMedia component="img" height="20%" image={url} alt={name} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {body}
