@@ -11,7 +11,6 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-
 function Post({ name, body, url }) {
   return (
     <Card sx={{ margin: "20px" }} position="absolute">

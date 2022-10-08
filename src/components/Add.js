@@ -60,7 +60,7 @@ function Add() {
           </Typography>
           <StyledBox>
             <Avatar src="image/u.jpg" sx={{ width: 50, height: 50 }}></Avatar>
-            <Typography fonrWeight={500} variant="span">
+            <Typography fontWeight={500} variant="span">
               Sarah Doe
             </Typography>
           </StyledBox>

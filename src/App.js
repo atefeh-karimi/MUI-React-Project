@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import Add from "./components/Add";
 
 function App() {
-  // const [mode, setMode] = React.useState("light");
   const [mode, setMode] = React.useState("light");
 
   const colorMode = React.useMemo(
@@ -32,7 +31,11 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Box bgcolor={"background.default"} color={"text.primary"}>
           <Navbar />
-          <Stack direction="row" spacing={2} justifyContent="space-between">
+          <Stack
+            direction="row"
+            sx={{ spacing: { xs: 0 } }}
+            justifyContent="space-between"
+          >
             <Sidebar />
             <Feed />
             <Rightbar />
