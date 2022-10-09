@@ -43,7 +43,6 @@ function Navbar() {
         <Typography sx={{ display: { xs: "none", sm: "block" } }}>
           LOGO
         </Typography>{" "}
-        {/* <MenuIcon sx={{ display: { sm: "none" } }} /> */}
         <MyDrawer />
         <Search bgcolor={"background.default"} color={"text.primary"}>
           <InputBase sx={{ width: "100%" }} placeholder="Search…" />
@@ -76,7 +75,7 @@ function Navbar() {
               width: "33px",
               height: "33px",
             }}
-            src="image/u.jpg"
+            src={process.env.PUBLIC_URL + "/image/u.jpg"}
           />
         </Icon>
       </ToolBarStyle>{" "}

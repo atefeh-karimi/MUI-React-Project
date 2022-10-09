@@ -59,7 +59,10 @@ function Add() {
             Create post
           </Typography>
           <StyledBox>
-            <Avatar src="image/u.jpg" sx={{ width: 50, height: 50 }}></Avatar>
+            <Avatar
+              src={process.env.PUBLIC_URL + "/image/u.jpg"}
+              sx={{ width: 50, height: 50 }}
+            ></Avatar>
             <Typography fontWeight={500} variant="span">
               Sarah Doe
             </Typography>

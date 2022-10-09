@@ -6,7 +6,7 @@ function Feed() {
   return (
     <Box flex={4} p={2}>
       {content.map((c) => {
-        return <Post key={c.id} name={c.name} body={c.body} url={c.image} />;
+        return <Post key={c.id} {...c} />;
       })}
     </Box>
   );

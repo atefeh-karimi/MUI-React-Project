@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-function Post({ name, body, url }) {
+function Post({ name, body, image }) {
   return (
     <Card sx={{ margin: "20px" }} position="absolute">
       <CardHeader
@@ -23,7 +23,12 @@ function Post({ name, body, url }) {
         title={name}
         subheader="September 19, 2022"
       />
-      <CardMedia component="img" height="20%" image={url} alt={name} />
+      <CardMedia
+        component="img"
+        height="20%"
+        image={process.env.PUBLIC_URL + image}
+        alt={name}
+      />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {body}
